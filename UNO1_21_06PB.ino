@@ -598,3 +598,40 @@ void zforward1()
 
   // Wait a second
 }
+
+void zreverse()
+{
+//  pinMode(stepPin1, OUTPUT);
+//  pinMode(dirPin1, OUTPUT);
+  digitalWrite(dirPin1, LOW);
+
+  // Spin motor slowly
+  for (int x = 0; x < moveCount; x++)
+  {
+
+    digitalWrite(stepPin1, HIGH);
+    delayMicroseconds(500);//900
+    digitalWrite(stepPin1, LOW);
+    delayMicroseconds(300);//100
+    delay(1);
+  }
+  //  delay(300); // Wait a second
+}
+void zreverse1()
+{
+//  pinMode(stepPin1, OUTPUT);
+//  pinMode(dirPin1, OUTPUT);
+  digitalWrite(dirPin1, LOW);
+
+  // Spin motor slowly
+  for (int x = 0; x < moveCount; x++)
+  {
+
+    digitalWrite(stepPin1, HIGH);
+    delayMicroseconds(10);//900
+    digitalWrite(stepPin1, LOW);
+    delayMicroseconds(10);//100
+    delay(4);
+  }
+  //  delay(300); // Wait a second
+}
